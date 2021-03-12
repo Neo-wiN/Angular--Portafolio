@@ -21,7 +21,7 @@ export class ProductosService {
 
   private cargueProductos(){
     
-    return new Promise( (resolve, reject)=>{
+    return new Promise<void>( (resolve, reject)=>{
       
     
 
@@ -30,6 +30,7 @@ export class ProductosService {
       //console.log(resp);
       this.producto=resp;     
      this.cargando=false;
+     resolve();
     
     /*  setTimeout(() => {
         this.cargando =false;
